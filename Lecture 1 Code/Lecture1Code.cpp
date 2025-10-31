@@ -1,7 +1,10 @@
 // Lecture 1 Code.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+#if 0
+
 #include <iostream>
+#include "Rectangle.h"
 
 template <typename Type>
 void Print(const Type& _val) {
@@ -83,17 +86,12 @@ public:
         }
 		return *this;
 	}
-
-    void Display() const {
-		std::cout << mString << '\n';
-    }
-
 };
 
 int main()
 {
 
-#if 0
+
     const int size = 10;
     int values[size];
 
@@ -112,17 +110,17 @@ int main()
     for (int i = 0; i < size; i++) {
         std::cout << (values + i) << '\t' << *(values + i) << '\n';
     }
-#endif
+
 
 	// Template function example
-#if 0
+
     Print(5);
 	Print(5.5f);
 	Print('A');
 
-#endif
 
-#if 0
+
+
     //Default
     Example* e = new Example;
     delete e;
@@ -139,10 +137,10 @@ int main()
 	// Assignment operator
 	e1 = copy1;
 
-#endif
+
 
 	// rule of 3 example
-#if 1
+
 	String hello("Hello, World!");
 
     hello.Display();
@@ -155,7 +153,8 @@ int main()
     assign = hello;
 
 	assign.Display();
-#endif
+
 
 }
 
+#endif
